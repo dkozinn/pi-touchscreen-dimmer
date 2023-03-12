@@ -118,9 +118,9 @@ int main(int argc, char* argv[]){
         sleepTime.tv_sec = 0;
         sleepTime.tv_nsec = 100000000L;  /* 1 seconds - larger values may reduce load even more */
 
-	char actual[46] = "/sys/class/backlight/10-0045/actual_brightness";
-	char max[43] = "/sys/class/backlight/10-0045/max_brightness";
-  	char bright[39] = "/sys/class/backlight/10-0045/brightness";
+	char actual[] = "/sys/class/backlight/10-0045/actual_brightness";
+	char max[] = "/sys/class/backlight/10-0045/max_brightness";
+  	char bright[] = "/sys/class/backlight/10-0045/brightness";
 
 	brightfd = fopen(bright, "w");
         if(brightfd == NULL){
